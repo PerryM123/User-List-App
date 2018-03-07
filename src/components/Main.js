@@ -5,10 +5,11 @@ import SearchResults from '../components/SearchResults'
 import UserInfo from '../components/UserInfo'
 
 class Main extends Component {
-  constructor() {
-    this.state ({
-      isSearching: false;
-    });
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSearching: false
+    };
   }
   render() {
     const isSearching = this.state.isSearching;
@@ -16,7 +17,7 @@ class Main extends Component {
     return (
       <div>
         <Searcher />
-        <SearchLoader />
+        <SearchLoader searchState={isSearching} />
         <SearchResults />
         <UserInfo />
       </div>

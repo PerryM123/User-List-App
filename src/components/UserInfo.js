@@ -15,7 +15,7 @@ class UserInfo extends Component {
             <dd>email:</dd><dt>Baseball@aol.com</dt>
           </dl>
         </div>
-        <div class="spacing-delete-me"></div>
+        <div className="spacing-delete-me"></div>
       </div>
     );
   }
