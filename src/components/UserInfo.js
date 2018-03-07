@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class UserInfo extends Component {
   render() {
+    console.log("UserInfo's render");
     return (
       <div>
         <div className="container container--info">

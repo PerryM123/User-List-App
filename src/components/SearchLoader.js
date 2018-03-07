@@ -3,13 +3,32 @@ import loading_logo from './../images/loading_icon.png';
 
 class SearchLoader extends Component {
   constructor(props) {
+    console.log("SearchLoader's render");
     super(props);
-    var word = this.props.searchState;
-    console.log("word: " + word)
+    this.state = {
+      searchIsDone: false
+    }
   }
+
+  componentDidMount() {
+    console.log("SearchLoader's render");
+    setTimeout(function() {
+      var how = this.state.searchIsDone;
+            console.log("SearchLoader's componentDidMount");
+            console.log("before: " + how);
+            this.setState({searchIsDone: true});
+            how = this.state.searchIsDone;
+            console.log("after: " + how);
+        }.bind(this), 5000);
+  }
+  /*
+  * If searching is done, hide spinner
+  */
   render() {
-    const isSearching = this.props.searchState;
-    if (!isSearching) {
+    console.log("SearchLoader's render");
+    const isDone = this.state.searchIsDone;
+    console.log("SearchLoader: isDone: " + isDone);
+    if (isDone) {
       return null;
     }
     return (

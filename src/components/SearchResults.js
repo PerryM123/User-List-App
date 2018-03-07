@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class SearchResults extends Component {
   render() {
+    console.log("SearchResults's render");
     return (
       <div>
         <div className="container">
