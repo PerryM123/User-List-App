@@ -30,9 +30,21 @@ class Searcher extends Component {
         </div>
         <div className="spacing-delete-me"></div>
         {
-          // What is the standard way of writing the ternary operator?
-          // This (URL below..) way of writing it is more preferred for ReactJS? -
-          // URL: https://stackoverflow.com/questions/29913387/show-hide-components-in-reactjs
+          /*
+          * 1)
+          * What is the standard way of writing the ternary operator?
+          * This (URL below..) way of writing it is more preferred for ReactJS? -
+          * URL: https://stackoverflow.com/questions/29913387/show-hide-components-in-reactjs
+          *
+          * 2)
+          * When SearchLoader is completed, it still exist and doesn't seem to hide/be destroyed.
+          * Is the point of sending a parent component's function to a child component is to update parent from the child???
+          * Hint to solving problem: 
+          * Hint#1: https://stackoverflow.com/questions/42917854/pass-value-from-child-to-parent-component-in-react
+          * Hint#2: https://ourcodeworld.com/articles/read/409/how-to-update-parent-state-from-child-component-in-react
+          */
+
+
           this.state.isSearching ? <SearchLoader isSearching={isSearching} /> : null
         }
       </div>
