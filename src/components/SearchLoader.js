@@ -19,6 +19,7 @@ class SearchLoader extends Component {
             this.setState({searchIsDone: true});
             how = this.state.searchIsDone;
             console.log("after: " + how);
+            console.log("HI");
         }.bind(this), 5000);
   }
   /*
