@@ -13,9 +13,11 @@ class Searcher extends Component {
   }
 
   searchStart() {
-    this.setState({
-      isSearching: true
-    });
+    // this.setState({
+    //   isSearching: true
+    // });
+    
+    
   }
 
   jumpButton() {
@@ -51,7 +53,7 @@ class Searcher extends Component {
           */
 
 
-          this.state.isSearching ? <SearchLoader isSearching={isSearching} /> : null
+          // this.state.isSearching ? <SearchLoader isSearching={isSearching} /> : null
         }
       </div>
     );
