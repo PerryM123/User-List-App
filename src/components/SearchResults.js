@@ -6,9 +6,9 @@ class SearchResults extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(event) {
-    const dataName = event.target.getAttribute("name");
-    const dataHobby = event.target.getAttribute("hobby");
-    const dataEmail = event.target.getAttribute("email");
+    const dataName = event.target.getAttribute("data-name");
+    const dataHobby = event.target.getAttribute("data-hobby");
+    const dataEmail = event.target.getAttribute("data-email");
     alert(dataName + ", " + dataHobby + ", " + dataEmail);
     // this.props.history.push({
     //   pathname: '/user-info',
