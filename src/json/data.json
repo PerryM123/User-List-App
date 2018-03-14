@@ -1,0 +1,121 @@
+{
+   "results":[  
+      {
+         "gender":"male",
+         "name":{
+            "title":"mr",
+            "first":"homero",
+            "last":"rezende"
+         },
+         "location":{
+            "street":"9772 rua onze ",
+            "city":"são mateus",
+            "state":"mato grosso",
+            "postcode":91687
+         },
+         "email":"homero.rezende@example.com",
+         "login":{
+            "username":"silverduck850",
+            "password":"252525",
+            "salt":"5XaDMbEX",
+            "md5":"99de97767d04658089d8f2c5243c5f78",
+            "sha1":"316997e9d8d9710a0f6398e3284861052c79ae23",
+            "sha256":"e7f703ebcadb3c2c7bc39ee10e937a115a3a030e2a4224bbaa10f53fd0ffab67"
+         },
+         "dob":"1965-09-03 13:11:30",
+         "registered":"2014-03-02 08:00:11",
+         "phone":"(66) 4479-1247",
+         "cell":"(65) 3788-7947",
+         "id":{
+            "name":"",
+            "value":null
+         },
+         "picture":{
+            "large":"https://randomuser.me/api/portraits/men/78.jpg",
+            "medium":"https://randomuser.me/api/portraits/med/men/78.jpg",
+            "thumbnail":"https://randomuser.me/api/portraits/thumb/men/78.jpg"
+         },
+         "nat":"BR"
+      },
+      {
+         "gender":"female",
+         "name":{
+            "title":"ms",
+            "first":"carolyn",
+            "last":"stevens"
+         },
+         "location":{
+            "street":"7208 kingsway",
+            "city":"sunderland",
+            "state":"suffolk",
+            "postcode":"LS9 2RJ"
+         },
+         "email":"carolyn.stevens@example.com",
+         "login":{
+            "username":"ticklishpanda607",
+            "password":"123789",
+            "salt":"0IPpMiuK",
+            "md5":"c63404fd8098ea68c18ba0e2ab67867e",
+            "sha1":"733d9164e439ee6365ce8d722114300c2daa07ff",
+            "sha256":"ab041b84ff424182a4758163f6742953032d692f22cd2d82be8ffe3560a76291"
+         },
+         "dob":"1988-01-09 12:25:30",
+         "registered":"2006-07-23 15:57:56",
+         "phone":"016977 36562",
+         "cell":"0771-892-805",
+         "id":{
+            "name":"NINO",
+            "value":"GB 32 77 67 F"
+         },
+         "picture":{
+            "large":"https://randomuser.me/api/portraits/women/84.jpg",
+            "medium":"https://randomuser.me/api/portraits/med/women/84.jpg",
+            "thumbnail":"https://randomuser.me/api/portraits/thumb/women/84.jpg"
+         },
+         "nat":"GB"
+      },
+      {
+         "gender":"male",
+         "name":{
+            "title":"mr",
+            "first":"nicklas",
+            "last":"johansen"
+         },
+         "location":{
+            "street":"5959 østerbyvej",
+            "city":"aalborg s.ø.",
+            "state":"danmark",
+            "postcode":62467
+         },
+         "email":"nicklas.johansen@example.com",
+         "login":{
+            "username":"ticklishgoose101",
+            "password":"stolen",
+            "salt":"ky3pQtr1",
+            "md5":"45c969f1b8f6afcd810f30f6548caf0a",
+            "sha1":"fb3bedb2428452ec91ef635a0cff05800c5146a5",
+            "sha256":"8db3084e9fa1c303c76a20c3d35acffdd3875ce9097ba08647a0d714b638fdf6"
+         },
+         "dob":"1952-09-18 21:02:58",
+         "registered":"2010-07-07 10:13:31",
+         "phone":"34882843",
+         "cell":"18168200",
+         "id":{
+            "name":"CPR",
+            "value":"232495-9475"
+         },
+         "picture":{
+            "large":"https://randomuser.me/api/portraits/men/47.jpg",
+            "medium":"https://randomuser.me/api/portraits/med/men/47.jpg",
+            "thumbnail":"https://randomuser.me/api/portraits/thumb/men/47.jpg"
+         },
+         "nat":"DK"
+      }
+   ],
+   "info":{
+      "seed":"10a3860a72ea47f0",
+      "results":3,
+      "page":1,
+      "version":"1.1"
+   }
+}
