@@ -9,12 +9,17 @@ class Searcher extends Component {
       isSearching: false
     };
     this.searchStart = this.searchStart.bind(this);
+    this.jumpButton = this.jumpButton.bind(this);
   }
 
   searchStart() {
     this.setState({
       isSearching: true
     });
+  }
+
+  jumpButton() {
+    this.props.history.push('/results'); // why is it a prop?!??!?!?!?!
   }
 
   render() {
@@ -27,6 +32,7 @@ class Searcher extends Component {
         <p>How many users to search?</p>
           <input placeholder="Enter here..." type="text" />
           <input value="Search" type="button" onClick={this.searchStart} />
+          <input value="Jump" type="button" onClick={this.jumpButton} />
         </div>
         <div className="spacing-delete-me"></div>
         {

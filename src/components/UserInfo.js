@@ -7,7 +7,7 @@ class UserInfo extends Component {
       <div>
         <div className="container container--info">
           <h2>Jack Rose</h2>
-          <div className="box"></div>
+          <div className="big-box"></div>
           <img src="" />
           <dl>
             <dd>Hobby:</dd><dt>Baseball</dt>
