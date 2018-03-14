@@ -35,13 +35,20 @@
   height: 50px;
   display: inline-block;
   margin: 10px;
+  transition: all .2s;
 }
 
-.container--info .box {
+.box:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.container--info .big-box {
   display: block;
   margin: auto;
   width: 200px;
   height: 200px;
+  background-color: lightgray;
 }
 
 dl {
