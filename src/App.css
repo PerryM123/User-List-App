@@ -63,6 +63,29 @@
   background-color: lightgray;
 }
 
+.container--info .button-area {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.container--info .button-area input {
+  background-color: #008CBA;
+  color: #FFF;
+  border-radius: 12px;
+  outline: none;
+  border: 0px;
+  font-size: 19px;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: .4s all;
+}
+
+.container--info .button-area input:hover {
+  background-color: #057194;
+}
+
 dl {
   width: 400px;
   margin: auto;

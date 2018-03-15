@@ -16,7 +16,8 @@ class ResultsItem extends Component {
       state: {
         name: this.props.name,
         hobby: this.props.hobby,
-        email: this.props.name
+        email: this.props.name,
+        userImage: this.props.userImage,
       }
     });
   }
@@ -32,12 +33,23 @@ class ResultsItem extends Component {
     );
   }
 }
-// Where in the code should this be placed?
-// Here? or at the top?
+/*
+ * React Questions:
+ * Where in the code should this be placed?
+ * Here? or at the top?
+ */
 ResultsItem.propTypes = {
   name: PropTypes.string.isRequired,
   hobby: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
+  email: PropTypes.string.isRequired,
+  userImage: PropTypes.string.isRequired
 };
 
+/*
+ * About using routers with child components to have history.push() to work
+ * https://stackoverflow.com/questions/43837212/this-props-history-push-works-in-some-components-and-not-others
+ *
+ * More on React Router:
+ * https://reacttraining.com/react-router/web/api/withRouter
+ */
 export default withRouter(ResultsItem);

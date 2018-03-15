@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 class UserInfo extends Component {
   constructor(props){
     super(props);
+    this.goBack = this.goBack.bind(this);
+  }
+  goBack() {
+    this.props.history.goBack();
   }
   render() {
     console.log("UserInfo's render");
@@ -18,6 +22,9 @@ class UserInfo extends Component {
           <dl>
             <dd>email:</dd><dt>{this.props.location.state.email}</dt>
           </dl>
+          <p className="button-area">
+            <input type="button" value="Go Back" onClick={this.goBack} />
+          </p>
         </div>
         <div className="spacing-delete-me"></div>
       </div>

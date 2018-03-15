@@ -16,12 +16,14 @@ class Searcher extends Component {
     // this.setState({
     //   isSearching: true
     // });
-    
-    
   }
 
+  /*
+  * history.push()?
+  * Is this the standard for programmatically forcing page jumps?
+  */
   jumpButton() {
-    this.props.history.push('/results'); // why is it a prop?!??!?!?!?!
+    this.props.history.push('/results');
   }
 
   render() {
@@ -39,6 +41,7 @@ class Searcher extends Component {
         <div className="spacing-delete-me"></div>
         {
           /*
+          * React Questions:
           * 1)
           * What is the standard way of writing the ternary operator?
           * This (URL below..) way of writing it is more preferred for ReactJS? -

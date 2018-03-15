@@ -4,6 +4,11 @@ import Searcher from '../components/Searcher'
 import SearchResults from '../components/SearchResults'
 import UserInfo from '../components/UserInfo'
 
+/*
+* Learn more about React Routing here:
+* https://reacttraining.com/react-router/web/example/basic
+*/
+
 class Main extends Component {
   render() {
     return (
