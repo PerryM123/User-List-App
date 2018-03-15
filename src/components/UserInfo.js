@@ -6,6 +6,10 @@ class UserInfo extends Component {
     this.goBack = this.goBack.bind(this);
   }
   goBack() {
+    /*
+    * Would it be better to just go back with a URL link to "/searchResults" or
+    * is it terrible to rewrite history in this way?
+    */
     this.props.history.goBack();
   }
   render() {
