@@ -13,9 +13,16 @@ class Searcher extends Component {
   }
 
   searchStart() {
-    // this.setState({
-    //   isSearching: true
-    // });
+    console.log("searchStart");
+    this.setState({
+      isSearching: true
+    });
+  }
+  searchEnd() {
+    console.log("searchEnd");
+    this.setState({
+      isSearching: false
+    });
   }
 
   /*
@@ -53,10 +60,12 @@ class Searcher extends Component {
           * Hint to solving problem: 
           * Hint#1: https://stackoverflow.com/questions/42917854/pass-value-from-child-to-parent-component-in-react
           * Hint#2: https://ourcodeworld.com/articles/read/409/how-to-update-parent-state-from-child-component-in-react
+          * Hint#3: https://stackoverflow.com/questions/29913387/show-hide-components-in-reactjs
+          * Hint#4: https://eddyerburgh.me/toggle-visibility-with-react
           */
 
 
-          // this.state.isSearching ? <SearchLoader isSearching={isSearching} /> : null
+          this.state.isSearching ? <SearchLoader isFinished={this.searchEnd} isSearching={isSearching} /> : null
         }
       </div>
     );
