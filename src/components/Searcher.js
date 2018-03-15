@@ -9,17 +9,18 @@ class Searcher extends Component {
       isSearching: false
     };
     this.searchStart = this.searchStart.bind(this);
+    this.searchEnd = this.searchEnd.bind(this);
     this.jumpButton = this.jumpButton.bind(this);
   }
 
   searchStart() {
-    console.log("searchStart");
+    console.log("searchStart+++++++++++++++++++++");
     this.setState({
       isSearching: true
     });
   }
   searchEnd() {
-    console.log("searchEnd");
+    console.log("searchEnd--------------------------");
     this.setState({
       isSearching: false
     });
