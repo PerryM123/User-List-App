@@ -49,13 +49,12 @@ class SearchLoader extends Component {
     }
     return (
       <div>
-      where?
       {
-        myData.results.map((item, index) => 
+        /*myData.results.map((item, index) => 
          <li key={index}>
           <p>gender: {item.gender}</p>
         </li>
-        )
+        )*/
       }
         <div className="loading">
           <h2>Searching...</h2>

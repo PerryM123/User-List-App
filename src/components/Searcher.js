@@ -6,10 +6,12 @@ class Searcher extends Component {
     console.log("Searcher's constructor");
     super(props);
     this.state = {
-      isSearching: false
+      isSearching: false,
+      searchResultsData: ["jo", "shmo"]
     };
     this.searchStart = this.searchStart.bind(this);
     this.searchEnd = this.searchEnd.bind(this);
+    this.getSearchData = this.getSearchData.bind(this);
   }
 
   searchStart() {
@@ -29,6 +31,12 @@ class Searcher extends Component {
     * Is this the standard for programmatically forcing page jumps?
     */
     this.props.history.push('/results');
+  }
+
+  getSearchData(data) {
+    this.setState({
+      searchResultsData: data
+    });
   }
 
 
@@ -63,7 +71,7 @@ class Searcher extends Component {
           */
 
 
-          this.state.isSearching ? <SearchLoader isFinished={this.searchEnd} isSearching={isSearching} /> : null
+          this.state.isSearching ? <SearchLoader getResults={this.getSearchData} isFinished={this.searchEnd} isSearching={isSearching} /> : null
         }
       </div>
     );
