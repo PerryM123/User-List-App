@@ -10,7 +10,6 @@ class Searcher extends Component {
     };
     this.searchStart = this.searchStart.bind(this);
     this.searchEnd = this.searchEnd.bind(this);
-    this.jumpButton = this.jumpButton.bind(this);
   }
 
   searchStart() {
@@ -24,15 +23,14 @@ class Searcher extends Component {
     this.setState({
       isSearching: false
     });
-  }
 
-  /*
-  * history.push()?
-  * Is this the standard for programmatically forcing page jumps?
-  */
-  jumpButton() {
+    /*
+    * history.push()?
+    * Is this the standard for programmatically forcing page jumps?
+    */
     this.props.history.push('/results');
   }
+
 
   render() {
     console.log("Searcher's render");
@@ -44,7 +42,6 @@ class Searcher extends Component {
         <p>How many users to search?</p>
           <input placeholder="Enter here..." type="text" />
           <input value="Search" type="button" onClick={this.searchStart} />
-          <input value="Jump" type="button" onClick={this.jumpButton} />
         </div>
         <div className="spacing-delete-me"></div>
         {
