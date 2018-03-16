@@ -26,22 +26,21 @@ class Searcher extends Component {
         errorInput: false
       });
     }
-
     // check if value is a number
     var currentInput = this.state.textInput;
-    if (isNaN(currentInput) ||
-      currentInput.length < 1 ||
-      currentInput < 1) {
+    if (isNaN(currentInput) || currentInput.length < 1 || currentInput < 1) {
+      console.log("Input Error");
       this.setState({
         errorInput: true
       });
-      return;
+      return; // if an unexpected value appears, return and do nothing
     }
 
     this.setState({
       isSearching: true
     });
   }
+
   searchEnd() {
     console.log("searchEnd--------------------------");
     this.setState({
@@ -49,6 +48,7 @@ class Searcher extends Component {
     });
 
     /*
+    * React Question
     * history.push()?
     * Is this the standard for programmatically forcing page jumps?
     */
