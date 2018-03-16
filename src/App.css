@@ -39,6 +39,10 @@
   margin-top: 0;
 }
 
+.container--first-screen .errorMessage {
+  color: red;
+}
+
 .box {
   background-color: lightgray;
   width: 100px;

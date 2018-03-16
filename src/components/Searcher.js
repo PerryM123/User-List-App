@@ -30,7 +30,8 @@ class Searcher extends Component {
     // check if value is a number
     var currentInput = this.state.textInput;
     if (isNaN(currentInput) ||
-      currentInput.length <= 0) {
+      currentInput.length < 1 ||
+      currentInput < 1) {
       this.setState({
         errorInput: true
       });
@@ -80,13 +81,13 @@ class Searcher extends Component {
     const isSearching = this.state.isSearching;
     console.log("isSearching: " + isSearching);
     return (
-      <div>
+      <div className="container--first-screen">
         <div className="search">
-        <p>How many users to search (numbers only...)?</p>
+        <p>How many users to search (numbers only!!)?</p>
           <input placeholder="Enter here..." type="text" onChange={this.updateInput} />
           <input value="Search" type="button" onClick={this.searchStart} />
           {
-            this.state.errorInput ? <ErrorInput message="Help meeeeeeee" /> : null
+            this.state.errorInput ? <ErrorInput message="Please enter NUMBER values only" /> : null
           }
         </div>
         <div className="spacing-delete-me"></div>

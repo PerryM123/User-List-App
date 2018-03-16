@@ -8,7 +8,7 @@ class ErrorInput extends Component {
   }
   render() {
     return(
-      <p>
+      <p className="errorMessage">
         {this.props.message}
       </p>
       );
