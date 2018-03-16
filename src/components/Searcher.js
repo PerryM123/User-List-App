@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchLoader from '../components/SearchLoader'
+import ErrorInput from '../components/ErrorInput'
 
 class Searcher extends Component {
   constructor(props) {
@@ -7,15 +8,35 @@ class Searcher extends Component {
     super(props);
     this.state = {
       isSearching: false,
-      searchResultsData: ["jo", "shmo"]
+      searchResultsData: ["jo", "shmo"],
+      textInput: "",
+      errorInput: false
     };
     this.searchStart = this.searchStart.bind(this);
     this.searchEnd = this.searchEnd.bind(this);
     this.getSearchData = this.getSearchData.bind(this);
+    this.updateInput = this.updateInput.bind(this);
+
   }
 
   searchStart() {
     console.log("searchStart+++++++++++++++++++++");
+    if (this.state.errorInput) {
+      this.setState({
+        errorInput: false
+      });
+    }
+
+    // check if value is a number
+    var currentInput = this.state.textInput;
+    if (isNaN(currentInput) ||
+      currentInput.length <= 0) {
+      this.setState({
+        errorInput: true
+      });
+      return;
+    }
+
     this.setState({
       isSearching: true
     });
@@ -39,6 +60,20 @@ class Searcher extends Component {
     });
   }
 
+  updateInput(e) {
+    /*
+    * React Question:
+    * When is the appropriate times to use:
+    * 1) var
+    * 2) const
+    * 3) let
+    */
+    var value = e.target.value;
+    this.setState({
+      textInput: value
+    });
+  }
+
 
   render() {
     console.log("Searcher's render");
@@ -47,9 +82,12 @@ class Searcher extends Component {
     return (
       <div>
         <div className="search">
-        <p>How many users to search?</p>
-          <input placeholder="Enter here..." type="text" />
+        <p>How many users to search (numbers only...)?</p>
+          <input placeholder="Enter here..." type="text" onChange={this.updateInput} />
           <input value="Search" type="button" onClick={this.searchStart} />
+          {
+            this.state.errorInput ? <ErrorInput message="Help meeeeeeee" /> : null
+          }
         </div>
         <div className="spacing-delete-me"></div>
         {
