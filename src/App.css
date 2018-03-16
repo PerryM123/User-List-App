@@ -102,3 +102,7 @@ dd, dt {
 dt {
   margin-left: 30px;
 }
+
+.hide-me-d00d {
+  opacity: 0.1;
+}
