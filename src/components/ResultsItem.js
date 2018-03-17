@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 class ResultsItem extends Component {
   constructor(props) {
-    console.log("ResultsItem's constructor");
+    console.log("ResultsItem's constructor"); // debugging
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -24,7 +24,7 @@ class ResultsItem extends Component {
 
 
   render() {
-    console.log("ResultsItem's render");
+    // console.log("ResultsItem's render"); // debugging
     return (
       <div className="item" onClick={this.handleClick}>
         <div className="box"></div>

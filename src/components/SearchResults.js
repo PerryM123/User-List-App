@@ -3,10 +3,14 @@ import ResultsItem from '../components/ResultsItem';
 
 class SearchResults extends Component {
   constructor(props) {
+    console.log("SearchResults constructor ");
     super(props);
+
+    console.log("results!!!!!"); // debugging
+    console.log(this.props.results);
   }
   render() {
-    console.log("SearchResults's render");
+    console.log("SearchResults's render"); // debugging
     return (
       <div>
         <div className="container--search">

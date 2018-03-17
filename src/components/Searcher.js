@@ -4,11 +4,11 @@ import ErrorInput from '../components/ErrorInput'
 
 class Searcher extends Component {
   constructor(props) {
-    console.log("Searcher's constructor");
+    console.log("Searcher's constructor"); // debugging
     super(props);
     this.state = {
       isSearching: false,
-      searchResultsData: ["jo", "shmo"],
+      searchResultsData: [],
       textInput: "",
       errorInput: false
     };
@@ -16,11 +16,10 @@ class Searcher extends Component {
     this.searchEnd = this.searchEnd.bind(this);
     this.getSearchData = this.getSearchData.bind(this);
     this.updateInput = this.updateInput.bind(this);
-
   }
 
   searchStart() {
-    console.log("searchStart+++++++++++++++++++++");
+    console.log("searchStart+++++++++++++++++++++"); // debugging
     if (this.state.errorInput) {
       this.setState({
         errorInput: false
@@ -42,7 +41,7 @@ class Searcher extends Component {
   }
 
   searchEnd() {
-    console.log("searchEnd--------------------------");
+    console.log("searchEnd--------------------------"); // debugging
     this.setState({
       isSearching: false
     });
@@ -52,10 +51,25 @@ class Searcher extends Component {
     * history.push()?
     * Is this the standard for programmatically forcing page jumps?
     */
-    this.props.history.push('/results');
+    this.props.history.push({
+      pathname: '/results',
+      state: {
+        results: this.state.searchResultsData
+      }
+    });
+
   }
 
+  /*
+  I'm getting an error here...
+  Error details: Can only update a mounted or mounting 
+  component. This usually means you called setState, 
+  replaceState, or forceUpdate on an unmounted component. 
+  This is a no-op.
+  */
   getSearchData(data) {
+    console.log("data!1");
+    console.log(data);
     this.setState({
       searchResultsData: data
     });
@@ -75,11 +89,10 @@ class Searcher extends Component {
     });
   }
 
-
   render() {
-    console.log("Searcher's render");
+    console.log("Searcher's render"); // debugging
     const isSearching = this.state.isSearching;
-    console.log("isSearching: " + isSearching);
+    console.log("isSearching: " + isSearching); // debugging
     return (
       <div className="container--first-screen">
         <div className="search">
@@ -110,7 +123,11 @@ class Searcher extends Component {
           */
 
 
-          this.state.isSearching ? <SearchLoader getResults={this.getSearchData} isFinished={this.searchEnd} isSearching={isSearching} /> : null
+          this.state.isSearching ? <SearchLoader 
+          userInput={this.state.textInput} 
+          getResults={this.getSearchData}
+          isFinished={this.searchEnd} 
+          isSearching={isSearching} /> : null
         }
       </div>
     );
