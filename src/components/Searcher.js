@@ -16,6 +16,7 @@ class Searcher extends Component {
     this.searchEnd = this.searchEnd.bind(this);
     this.getSearchData = this.getSearchData.bind(this);
     this.updateInput = this.updateInput.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   searchStart() {
@@ -89,6 +90,12 @@ class Searcher extends Component {
     });
   }
 
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      this.searchStart();
+    }
+  }
+
   render() {
     console.log("Searcher's render"); // debugging
     const isSearching = this.state.isSearching;
@@ -97,7 +104,7 @@ class Searcher extends Component {
       <div className="container--first-screen">
         <div className="search">
         <p>How many users to search (numbers only!!)?</p>
-          <input placeholder="Enter here..." type="text" onChange={this.updateInput} />
+          <input placeholder="Enter here..." onKeyPress={this.handleKeyPress} type="text" onChange={this.updateInput} />
           <input value="Search" type="button" onClick={this.searchStart} />
           {
             this.state.errorInput ? <ErrorInput message="Please enter NUMBER values only" /> : null
