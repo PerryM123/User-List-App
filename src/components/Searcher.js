@@ -101,11 +101,11 @@ class Searcher extends Component {
     const isSearching = this.state.isSearching;
     console.log("isSearching: " + isSearching); // debugging
     return (
-      <div className="container--first-screen">
+      <div className="container container--first-screen">
         <div className="search">
         <p>How many users to search (numbers only!!)?</p>
-          <input placeholder="Enter here..." onKeyPress={this.handleKeyPress} type="text" onChange={this.updateInput} />
-          <input value="Search" type="button" onClick={this.searchStart} />
+          <input placeholder="Enter here..." onKeyPress={this.handleKeyPress} type="text" onChange={this.updateInput} className="textbox-input" />
+          <input value="Search" type="button" onClick={this.searchStart} className="button-input" />
           {
             this.state.errorInput ? <ErrorInput message="Please enter NUMBER values only" /> : null
           }

@@ -13,8 +13,13 @@ class SearchResults extends Component {
     console.log("SearchResults's render"); // debugging
     return (
       <div>
-        <div className="container--search">
+        <div className="container container--search">
           <h2>Search Results</h2>
+          {/*
+            * React Question:
+            * Is it possible to enable tabbing for all these items?
+            * How do you do that in the first place?
+            */}
           <ResultsItem name="name01" hobby="hobby01" email="email01" userImage="something.jpg" />
           <ResultsItem name="name02" hobby="hobby02" email="email02" userImage="something.jpg" />
           <ResultsItem name="name03" hobby="hobby03" email="email03" userImage="something.jpg" />

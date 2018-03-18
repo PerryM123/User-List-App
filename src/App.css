@@ -4,8 +4,9 @@
 
 .search {
   text-align: center;
-  background: lightblue;
-  padding: 80px 50px;
+  background: lightblue;    
+  padding: 80px 30px;
+  margin: 0 10px;
   border-radius: 20px;
 }
 
@@ -51,6 +52,30 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.container--first-screen .textbox-input {
+  padding: 7px;
+  border: 0;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.container--first-screen .button-input {
+  background-color: #008CBA;
+  color: #FFF;
+  border-radius: 12px;
+  outline: none;
+  border: 0px;
+  font-size: 14px;
+  padding: 7px 35px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: .4s all;
+}
+
+.container--first-screen .button-input:hover {
+    background-color: #057194;
 }
 
 .container--first-screen .errorMessage {

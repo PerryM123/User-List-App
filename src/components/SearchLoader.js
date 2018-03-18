@@ -48,8 +48,6 @@ class SearchLoader extends Component {
 
     return (
       <div>
-      {
-      }
         <div className="loading">
           <h2>Searching...</h2>
           <img src={loading_logo} />
