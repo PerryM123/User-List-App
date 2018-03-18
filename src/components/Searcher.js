@@ -102,9 +102,7 @@ class Searcher extends Component {
           {
             this.state.errorInput ? <ErrorInput message="Please enter NUMBER values only" /> : null
           }
-        </div>
-        <div className="spacing-delete-me"></div>
-        {
+          {
           /*
           * React Questions:
           * 1)
@@ -129,6 +127,7 @@ class Searcher extends Component {
           isFinished={this.searchEnd} 
           isSearching={isSearching} /> : null
         }
+        </div>
       </div>
     );
   }

@@ -54,7 +54,6 @@ class SearchLoader extends Component {
           <h2>Searching...</h2>
           <img src={loading_logo} />
         </div>
-        <div className="spacing-delete-me"></div>
       </div>
     );
   }
