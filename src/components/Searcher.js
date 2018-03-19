@@ -134,7 +134,6 @@ class Searcher extends Component {
 
           this.state.isSearching ? <SearchLoader 
           userInput={this.state.textInput} 
-          getResults={this.getSearchData}
           isFinished={this.searchEnd} 
           isSearching={isSearching} /> : null
         }
