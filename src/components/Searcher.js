@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchLoader from '../components/SearchLoader'
 import ErrorInput from '../components/ErrorInput'
+import { withRouter } from 'react-router';
 
 class Searcher extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Searcher extends Component {
     });
   }
 
-  searchEnd() {
+  searchEnd(data) {
     console.log("searchEnd--------------------------"); // debugging
     this.setState({
       isSearching: false
@@ -52,10 +53,15 @@ class Searcher extends Component {
     * history.push()?
     * Is this the standard for programmatically forcing page jumps?
     */
+    console.log("this is what I am");
+    console.log(data);
+    
+    console.log("this is what I am2");
+    console.log(this.state.searchResultsData);
     this.props.history.push({
       pathname: '/results',
       state: {
-        results: this.state.searchResultsData
+        results: data
       }
     });
 
@@ -78,6 +84,7 @@ class Searcher extends Component {
     this.setState({
       searchResultsData: data
     });
+    this.searchEnd(data);
   }
 
   updateInput(e) {
@@ -144,4 +151,4 @@ class Searcher extends Component {
   }
 }
 
-export default Searcher;
+export default withRouter(Searcher);

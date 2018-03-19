@@ -28,7 +28,6 @@ class SearchLoader extends Component {
         people.push(person);
       }
       this.props.getResults(people);
-      this.props.isFinished();
     }.bind(this), 2000);
   }
   /*

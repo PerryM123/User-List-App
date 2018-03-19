@@ -7,7 +7,13 @@ class SearchResults extends Component {
     super(props);
 
     console.log("results!!!!!"); // debugging
+
+    this.testHandler = this.testHandler.bind(this);
+  }
+  testHandler() {
+    console.log("testHandler!!!!!"); // debugging
     console.log(this.props.results);
+    console.log(this.props.results2);
   }
   render() {
     console.log("SearchResults's render"); // debugging
@@ -15,6 +21,7 @@ class SearchResults extends Component {
       <div>
         <div className="container container--search">
           <h2>Search Results</h2>
+          <input type="button" onClick={this.testHandler} value="Test" />
           {/*
             * React Question:
             * Is it possible to enable tabbing for all these items?
