@@ -16,7 +16,6 @@ class SearchLoader extends Component {
     setTimeout(function() {
       console.log("SearchLoader's setTimeout()");
       this.setState({searchIsDone: true});
-      this.props.isFinished();
       var people = [];
       var person;
       for (var i = 0; i < this.props.userInput; i++) {
@@ -29,6 +28,7 @@ class SearchLoader extends Component {
         people.push(person);
       }
       this.props.getResults(people);
+      this.props.isFinished();
     }.bind(this), 2000);
   }
   /*
