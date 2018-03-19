@@ -26,7 +26,7 @@ class ResultsItem extends Component {
   render() {
     // console.log("ResultsItem's render"); // debugging
     return (
-      <div className="item" onClick={this.handleClick}>
+      <div tabindex="0" className="item" onClick={this.handleClick}>
         <div className="box"></div>
         <p>{this.props.name}</p>
       </div>
