@@ -6,14 +6,12 @@ class SearchResults extends Component {
     console.log("SearchResults constructor ");
     super(props);
 
-    console.log("results!!!!!"); // debugging
 
     this.testHandler = this.testHandler.bind(this);
   }
   testHandler() {
     console.log("testHandler!!!!!"); // debugging
-    console.log(this.props.results);
-    console.log(this.props.results2);
+    console.log(this.props.location.state.results);
   }
   render() {
     console.log("SearchResults's render"); // debugging
