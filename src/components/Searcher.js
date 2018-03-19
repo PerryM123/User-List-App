@@ -62,11 +62,15 @@ class Searcher extends Component {
   }
 
   /*
-  I'm getting an error here...
-  Error details: Can only update a mounted or mounting 
-  component. This usually means you called setState, 
-  replaceState, or forceUpdate on an unmounted component. 
-  This is a no-op.
+  * I'm getting an error here...
+  * Error details: Can only update a mounted or mounting
+  * component. This usually means you called setState,
+  * replaceState, or forceUpdate on an unmounted component.
+  * This is a no-op.
+  *
+  * This may have to do with setState being asynchronous?!?!
+  * 1) https://blog.cloudboost.io/3-reasons-why-i-stopped-using-react-setstate-ab73fc67a42e
+  * 2) https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1
   */
   getSearchData(data) {
     console.log("data!1");
