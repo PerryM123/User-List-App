@@ -5,26 +5,32 @@ class SearchResults extends Component {
   constructor(props) {
     console.log("SearchResults constructor ");
     super(props);
+    this.state = ({
+      userList: this.props.location.state.results
+    });
 
-
-    this.testHandler = this.testHandler.bind(this);
-  }
-  testHandler() {
-    console.log("testHandler!!!!!"); // debugging
-    console.log(this.props.location.state.results);
   }
   render() {
     console.log("SearchResults's render"); // debugging
+    var someList = this.state.userList;
+    console.log("MAAAAAAAAAAAAAAAAAAAAN");
+    console.log(someList);
+    let list = someList.map((item, index) => {
+       <li key={index}>
+        <p>gender: {item.gender}</p>
+      </li>
+    });
     return (
       <div>
         <div className="container container--search">
           <h2>Search Results</h2>
-          <input type="button" onClick={this.testHandler} value="Test" />
           {/*
             * React Question:
             * Is it possible to enable tabbing for all these items?
             * How do you do that in the first place?
             */}
+
+            { list }
           <ResultsItem name="name01" hobby="hobby01" email="email01" userImage="something.jpg" />
           <ResultsItem name="name02" hobby="hobby02" email="email02" userImage="something.jpg" />
           <ResultsItem name="name03" hobby="hobby03" email="email03" userImage="something.jpg" />
