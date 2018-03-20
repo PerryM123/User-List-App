@@ -18,10 +18,9 @@ class UserInfo extends Component {
       <div>
         <div className="container container--info">
           <h2>{this.props.location.state.name}</h2>
-          <div className="big-box"></div>
-          <img src="" />
+          <img src={this.props.location.state.userImage} className="big-box"/>
           <dl>
-            <dd>Hobby:</dd><dt>{this.props.location.state.hobby}</dt>
+            <dd>Gender:</dd><dt>{this.props.location.state.hobby}</dt>
           </dl>
           <dl>
             <dd>email:</dd><dt>{this.props.location.state.email}</dt>

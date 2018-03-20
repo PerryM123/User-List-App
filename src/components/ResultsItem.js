@@ -27,7 +27,7 @@ class ResultsItem extends Component {
     // console.log("ResultsItem's render"); // debugging
     return (
       <div tabIndex="0" className="item" onClick={this.handleClick}>
-        <div className="box"></div>
+        <img src={this.props.userImage} className="box"/>
         <p>{this.props.name}</p>
       </div>
     );

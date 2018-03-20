@@ -20,7 +20,7 @@ class SearchLoader extends Component {
       var person;
       for (var i = 0; i < this.props.userInput; i++) {
         person = {
-          name: myData.results[i].name.first + " " + myData.results[i].name.first,
+          name: myData.results[i].name.first + " " + myData.results[i].name.last,
           gender: myData.results[i].gender,
           email: myData.results[i].email,
           img_url: myData.results[i].picture.large
