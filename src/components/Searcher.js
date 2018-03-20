@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 
 class Searcher extends Component {
   constructor(props) {
-    console.log("Searcher's constructor"); // debugging
+    // console.log("Searcher's constructor"); // debugging
     super(props);
     this.state = {
       isSearching: false,
@@ -21,7 +21,7 @@ class Searcher extends Component {
   }
 
   searchStart() {
-    console.log("searchStart+++++++++++++++++++++"); // debugging
+    // console.log("searchStart+++++++++++++++++++++"); // debugging
     if (this.state.errorInput) {
       this.setState({
         errorInput: false
@@ -30,7 +30,7 @@ class Searcher extends Component {
     // check if value is a number
     var currentInput = this.state.textInput;
     if (isNaN(currentInput) || currentInput.length < 1 || currentInput < 1) {
-      console.log("Input Error");
+      // console.log("Input Error");
       this.setState({
         errorInput: true
       });
@@ -43,7 +43,7 @@ class Searcher extends Component {
   }
 
   searchEnd(data) {
-    console.log("searchEnd--------------------------"); // debugging
+    // console.log("searchEnd--------------------------"); // debugging
     this.setState({
       isSearching: false
     });
@@ -53,11 +53,6 @@ class Searcher extends Component {
     * history.push()?
     * Is this the standard for programmatically forcing page jumps?
     */
-    console.log("this is what I am");
-    console.log(data);
-    
-    console.log("this is what I am2");
-    console.log(this.state.searchResultsData);
     this.props.history.push({
       pathname: '/results',
       state: {
@@ -79,8 +74,6 @@ class Searcher extends Component {
   * 2) https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1
   */
   getSearchData(data) {
-    console.log("data!1");
-    console.log(data);
     this.setState({
       searchResultsData: data
     });
@@ -108,9 +101,8 @@ class Searcher extends Component {
   }
 
   render() {
-    console.log("Searcher's render"); // debugging
+    // console.log("Searcher's render"); // debugging
     const isSearching = this.state.isSearching;
-    console.log("isSearching: " + isSearching); // debugging
     return (
       <div className="container container--first-screen">
         <div className="search">
@@ -137,7 +129,6 @@ class Searcher extends Component {
           * Hint#3: https://stackoverflow.com/questions/29913387/show-hide-components-in-reactjs
           * Hint#4: https://eddyerburgh.me/toggle-visibility-with-react
           */
-
 
           this.state.isSearching ? <SearchLoader 
           userInput={this.state.textInput} 

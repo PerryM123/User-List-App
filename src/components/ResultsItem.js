@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 class ResultsItem extends Component {
   constructor(props) {
-    console.log("ResultsItem's constructor"); // debugging
+    // console.log("ResultsItem's constructor"); // debugging
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -27,7 +27,7 @@ class ResultsItem extends Component {
     // console.log("ResultsItem's render"); // debugging
     return (
       <div tabIndex="0" className="item" onClick={this.handleClick}>
-        <img src={this.props.userImage} className="box"/>
+        <img src={this.props.userImage} alt="user thumbnail" className="box"/>
         <p>{this.props.name}</p>
       </div>
     );

@@ -13,17 +13,19 @@ class UserInfo extends Component {
     this.props.history.goBack();
   }
   render() {
-    console.log("UserInfo's render");
+    // console.log("UserInfo's render"); // debugging
     return (
       <div>
         <div className="container container--info">
           <h2>{this.props.location.state.name}</h2>
-          <img src={this.props.location.state.userImage} className="big-box"/>
+          <img src={this.props.location.state.userImage} alt="our user" className="big-box"/>
           <dl>
-            <dd>Gender:</dd><dt>{this.props.location.state.hobby}</dt>
+            <dd>Gender:</dd>
+            <dt>{this.props.location.state.hobby}</dt>
           </dl>
           <dl>
-            <dd>email:</dd><dt>{this.props.location.state.email}</dt>
+            <dd>email:</dd>
+            <dt>{this.props.location.state.email}</dt>
           </dl>
           <p className="button-area">
             <input type="button" value="Go Back" onClick={this.goBack} />

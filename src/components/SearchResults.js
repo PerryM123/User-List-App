@@ -3,7 +3,7 @@ import ResultsItem from '../components/ResultsItem';
 
 class SearchResults extends Component {
   constructor(props) {
-    console.log("SearchResults constructor ");
+    // console.log("SearchResults constructor "); // debugging
     super(props);
     this.state = ({
       userList: this.props.location.state.results
@@ -11,15 +11,8 @@ class SearchResults extends Component {
 
   }
   render() {
-    console.log("SearchResults's render"); // debugging
+    // console.log("SearchResults's render"); // debugging
     var someList = this.state.userList;
-    console.log("MAAAAAAAAAAAAAAAAAAAAN");
-    console.log(someList);
-    let list = someList.map((item, index) => {
-       <li key={index}>
-        <p>gender: {item.gender}</p>
-      </li>
-    });
     return (
       <div>
         <div className="container container--search">

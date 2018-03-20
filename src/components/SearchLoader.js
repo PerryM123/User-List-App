@@ -36,11 +36,6 @@ class SearchLoader extends Component {
   render() {
     console.log("SearchLoader's render");
     const isDone = this.state.searchIsDone;
-    let results = myData.results.map((item, index) => {
-       <li key={index}>
-        <p>gender: {item.gender}</p>
-      </li>
-    });
     if (isDone) {
       return null;
     }
@@ -49,7 +44,7 @@ class SearchLoader extends Component {
       <div>
         <div className="loading">
           <h2>Searching...</h2>
-          <img src={loading_logo} />
+          <img src={loading_logo} alt="loading-icon" />
         </div>
       </div>
     );
