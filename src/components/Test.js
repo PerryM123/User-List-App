@@ -4,7 +4,9 @@ import Mui from '../mui';
 
 /*
 * Reference link:
-* http://www.material-ui.com/#/components/app-bar 
+* 1) http://www.material-ui.com/#/components/app-bar
+* 2) Reddit discussion about ReactJS + Material-UI:
+*    https://www.reddit.com/r/reactjs/comments/5p1rin/whats_the_best_way_to_use_material_design_with/ 
 */
 
 /*
