@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Main from './components/Main.js';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 /*
 * Question
 * Does each component need to handle it's own css?
