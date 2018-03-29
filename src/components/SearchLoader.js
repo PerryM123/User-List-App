@@ -16,9 +16,9 @@ class SearchLoader extends Component {
     setTimeout(function() {
       console.log("SearchLoader's setTimeout()");
       this.setState({searchIsDone: true});
-      var people = [];
-      var person;
-      for (var i = 0; i < this.props.userInput; i++) {
+      let people = [];
+      let person;
+      for (let i = 0; i < this.props.userInput; i++) {
         person = {
           name: myData.results[i].name.first + " " + myData.results[i].name.last,
           gender: myData.results[i].gender,

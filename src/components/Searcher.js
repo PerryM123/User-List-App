@@ -28,7 +28,7 @@ class Searcher extends Component {
       });
     }
     // check if value is a number
-    var currentInput = this.state.textInput;
+    let currentInput = this.state.textInput;
     if (isNaN(currentInput) || currentInput.length < 1 || currentInput < 1) {
       // console.log("Input Error");
       this.setState({
@@ -88,13 +88,14 @@ class Searcher extends Component {
     * 2) const
     * 3) let
     */
-    var value = e.target.value;
+    let value = e.target.value;
     this.setState({
       textInput: value
     });
   }
 
   handleKeyPress(e) {
+    e.preventDefault(); // React Question: Should this be done everytime I handle user input???
     if (e.key === 'Enter') {
       this.searchStart();
     }

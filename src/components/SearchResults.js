@@ -12,7 +12,7 @@ class SearchResults extends Component {
   }
   render() {
     // console.log("SearchResults's render"); // debugging
-    var someList = this.state.userList;
+    let someList = this.state.userList;
     return (
       <div>
         <div className="container container--search">

@@ -10,6 +10,7 @@ class ResultsItem extends Component {
   }
 
   handleClick(event) {
+    event.preventDefault(); // React Question: Should this be done everytime I handle user input???
     // alert(this.props.name + ", " + this.props.hobby + ", " + this.props.email); // debugging
     this.props.history.push({
       pathname: '/user-info',
