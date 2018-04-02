@@ -1,0 +1,24 @@
+{
+   "Location": [
+      {
+         "name": "MIKADO",
+         "lat": 35.712735,
+         "long": 139.703455,
+         "gameName": [
+            "Game1",
+            "Game2",
+            "Game3"
+         ]
+      },
+      {
+         "name": "VERSUS",
+         "lat": 35.731840,
+         "long": 139.767887,
+         "gameName": [
+            "Game5",
+            "Game6",
+            "Game7"
+         ]
+      }
+   ]   
+}
