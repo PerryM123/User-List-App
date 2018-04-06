@@ -3,9 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import Searcher from '../components/Searcher'
 import SearchResults from '../components/SearchResults'
 import UserInfo from '../components/UserInfo'
-import ComponentOne from '../components/ComponentOne'
-import ComponentTwo from '../components/ComponentTwo'
-import ComponentThree from '../components/ComponentThree'
 
 /*
 * Learn more about React Routing here:
@@ -16,9 +13,11 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <ComponentOne />
-        <ComponentTwo />
-        <ComponentThree />
+      	<Switch>
+          <Route exact path='/' component={Searcher}/>
+          <Route exact path='/results' component={SearchResults}/>
+          <Route exact path='/user-info' component={UserInfo}/>
+        </Switch>
       </div>
     );
   }
