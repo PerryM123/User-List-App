@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 class ComponentOne extends Component {
   render() {
     return(
-      <p className="errorMessage">
-        ComponentOne
-      </p>
+      <div className="errorMessage">
+        <p>ComponentOne</p>
+        <p><input type="button" value="Component 1 Button" onClick={this.props.handleClick}/></p>
+      </div>
     );
   }
 }

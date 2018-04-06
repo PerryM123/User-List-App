@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class ComponentTwo exteTwo Component {
+class ComponentTwo extends Component {
   render() {
     return(
-      <p className="errorMessage">
-        ComponentTwo
-      </p>
+      <div className="errorMessage">
+        <p>ComponentTwo</p>
+        <p><input type="button" value="Component 2 Button" onClick={this.props.handleClick}/></p>
+      </div>
     );
   }
 }
